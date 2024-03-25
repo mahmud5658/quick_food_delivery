@@ -16,4 +16,12 @@ class AppWidget {
         fontWeight: FontWeight.bold,
         fontFamily: 'Poppins');
   }
+
+  static TextStyle lightTextFeildStyle() {
+    return const TextStyle(
+        color: Colors.black38,
+        fontSize: 15,
+        fontWeight: FontWeight.w500,
+        fontFamily: 'Poppins');
+  }
 }
