@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quick_food_delivery/pages/details.dart';
 
 import 'package:quick_food_delivery/widgets/widget_support.dart';
 
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 20.0),
+                  margin: const EdgeInsets.only(left: 20.0),
                   child: Text(
                     'Hello Abdullah,',
                     style: AppWidget.boldTextFeildStyle(),
@@ -80,41 +81,47 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: const EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'images/salad2.png',
-                              height: 150,
-                              width: 150,
-                              fit: BoxFit.cover,
-                            ),
-                            Text(
-                              'Veggie Taco Hash',
-                              style: AppWidget.semiBoldTextFeildStyle(),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              'Fresh and Healthy',
-                              style: AppWidget.lightTextFeildStyle(),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              '\$25',
-                              style: AppWidget.semiBoldTextFeildStyle(),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Details()));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: const EdgeInsets.all(14),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'images/salad2.png',
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              ),
+                              Text(
+                                'Veggie Taco Hash',
+                                style: AppWidget.semiBoldTextFeildStyle(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                'Fresh and Healthy',
+                                style: AppWidget.lightTextFeildStyle(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                '\$25',
+                                style: AppWidget.semiBoldTextFeildStyle(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
