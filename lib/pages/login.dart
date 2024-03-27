@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quick_food_delivery/widgets/widget_support.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -16,21 +17,86 @@ class _LoginState extends State<Login> {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
-              decoration: BoxDecoration(
+              height: MediaQuery.of(context).size.height / 2,
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [Color(0xFFff5c30), Color(0xFFe74b1a)])),
             ),
             Container(
-              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height / 3.5),
+              margin:
+                  EdgeInsets.only(top: MediaQuery.of(context).size.height / 3),
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
-               decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))),
-              child: Text(''),
-             
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30))),
+              child: const Text(''),
             ),
+            Container(
+              margin: const EdgeInsets.only(top: 60, left: 20, right: 20),
+              child: Column(
+                children: [
+                  Center(
+                    child: Image.asset(
+                      'images/logo.png',
+                      width: MediaQuery.of(context).size.width / 1.5,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Material(
+                    elevation: 5,
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height / 2.5,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            'Login',
+                            style: AppWidget.headlineTextFeildStyle(),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Email',
+                              hintStyle: AppWidget.semiBoldTextFeildStyle(),
+                              prefixIcon: Icon(Icons.email_outlined),
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Password',
+                              hintStyle: AppWidget.semiBoldTextFeildStyle(),
+                              prefixIcon: Icon(Icons.password_outlined),
+                            ),
+                          ),
+                         const  SizedBox(height: 20,),
+                          Container(
+                            alignment: Alignment.topRight,
+                            child: Text(
+                              'Forgot Password?',
+                              style: AppWidget.semiBoldTextFeildStyle(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

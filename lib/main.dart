@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quick_food_delivery/pages/bottomnav.dart';
 import 'package:quick_food_delivery/pages/login.dart';
-
 
 void main() {
   runApp(const MyApp());
