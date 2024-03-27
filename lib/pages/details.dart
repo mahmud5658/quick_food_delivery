@@ -1,7 +1,5 @@
-// import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:quick_food_delivery/widgets/widget_support.dart';
 
 class Details extends StatefulWidget {
@@ -113,14 +111,14 @@ class _DetailsState extends State<Details> {
                   'Delivery Time',
                   style: AppWidget.semiBoldTextFeildStyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25.0,
                 ),
-                Icon(
+                const Icon(
                   Icons.alarm,
                   color: Colors.black54,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(
@@ -129,7 +127,7 @@ class _DetailsState extends State<Details> {
                 )
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: Row(
@@ -149,13 +147,31 @@ class _DetailsState extends State<Details> {
                     ],
                   ),
                   Container(
-                    padding: EdgeInsets.all(5.0),
+                    width: MediaQuery.of(context).size.width/2,
+                    padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       color: Colors.black,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text(
-                      'Add to Cart',
-                      style: TextStyle(color: Colors.white,fontFamily: 'Poppins',fontSize: 16),
+                    child: Row(
+                      children: [
+                        const Text(
+                          'Add to Cart',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Poppins',
+                              fontSize: 16),
+                        ),
+                        const SizedBox(width: 30.0,),
+                        Container(
+                          padding: const EdgeInsets.all(3),
+                          decoration: BoxDecoration(color: Colors.grey,borderRadius: BorderRadius.circular(8)),
+                          child: const Icon(
+                            Icons.shopping_cart_outlined,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ],
