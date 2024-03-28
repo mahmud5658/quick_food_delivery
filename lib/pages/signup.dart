@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:quick_food_delivery/pages/signup.dart';
+import 'package:quick_food_delivery/pages/login.dart';
 import 'package:quick_food_delivery/widgets/widget_support.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +58,7 @@ class _LoginState extends State<Login> {
                     child: Container(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 2,
+                      height: MediaQuery.of(context).size.height / 1.5,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20)),
@@ -70,8 +70,18 @@ class _LoginState extends State<Login> {
                               height: 30,
                             ),
                             Text(
-                              'Log In',
+                              'Sign Up',
                               style: AppWidget.headlineTextFeildStyle(),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Name',
+                                hintStyle: AppWidget.semiBoldTextFeildStyle(),
+                                prefixIcon: const Icon(Icons.email_outlined),
+                              ),
                             ),
                             SizedBox(
                               height: 20,
@@ -93,9 +103,6 @@ class _LoginState extends State<Login> {
                                 hintStyle: AppWidget.semiBoldTextFeildStyle(),
                                 prefixIcon: const Icon(Icons.password_outlined),
                               ),
-                            ),
-                            SizedBox(
-                              height: 20,
                             ),
                             const SizedBox(
                               height: 20,
@@ -123,7 +130,7 @@ class _LoginState extends State<Login> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                  'LOGIN',
+                                  'SIGN UP',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
@@ -137,16 +144,16 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const SignUp()));
+                            MaterialPageRoute(builder: (context) => Login()));
                       },
                       child: Text(
-                        "Don't have an account? SignUp",
+                        "Already have an account? login",
                         style: AppWidget.semiBoldTextFeildStyle(),
                       ))
                 ],
