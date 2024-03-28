@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
                     child: Container(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 2.5,
+                      height: MediaQuery.of(context).size.height / 2,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20)),
@@ -72,14 +72,14 @@ class _LoginState extends State<Login> {
                             decoration: InputDecoration(
                               hintText: 'Email',
                               hintStyle: AppWidget.semiBoldTextFeildStyle(),
-                              prefixIcon: Icon(Icons.email_outlined),
+                              prefixIcon: const Icon(Icons.email_outlined),
                             ),
                           ),
                           TextField(
                             decoration: InputDecoration(
                               hintText: 'Password',
                               hintStyle: AppWidget.semiBoldTextFeildStyle(),
-                              prefixIcon: Icon(Icons.password_outlined),
+                              prefixIcon: const Icon(Icons.password_outlined),
                             ),
                           ),
                          const  SizedBox(height: 20,),
@@ -89,7 +89,11 @@ class _LoginState extends State<Login> {
                               'Forgot Password?',
                               style: AppWidget.semiBoldTextFeildStyle(),
                             ),
-                          )
+                          ),
+                           const  SizedBox(height: 60,),
+                          Container(width: 200,
+                          decoration: const BoxDecoration(color: Color(0xFFff5c30)),
+                          child: const Center(child: Text('Login',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,fontFamily: "Poppins1"),)),)
                         ],
                       ),
                     ),
