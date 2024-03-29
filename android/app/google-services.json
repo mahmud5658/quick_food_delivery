@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1016163657078",
+    "project_id": "quickfood-a5260",
+    "storage_bucket": "quickfood-a5260.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016163657078:android:cb9fc7183dee8000b98657",
+        "android_client_info": {
+          "package_name": "com.example.quick_food_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEDqrYrVWC8H5Hs9YwsmkDxbk-ohoaOi0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
