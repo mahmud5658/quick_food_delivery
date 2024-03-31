@@ -11,6 +11,9 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  String email = "";
+  String password = "";
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
