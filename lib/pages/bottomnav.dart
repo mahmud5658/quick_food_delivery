@@ -7,7 +7,6 @@ import 'package:quick_food_delivery/pages/wallet.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
-
   @override
   State<BottomNav> createState() => _BottomNavState();
 }

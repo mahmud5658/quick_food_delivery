@@ -128,7 +128,7 @@ class _SignUpState extends State<SignUp> {
                                 'Sign Up',
                                 style: AppWidget.headlineTextFeildStyle(),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               TextFormField(
